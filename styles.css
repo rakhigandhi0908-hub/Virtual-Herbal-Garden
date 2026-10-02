@@ -1,0 +1,194 @@
+:root {
+    --primary-color: #1a1a1a;   /* Dark Charcoal */
+    --secondary-color: #39ff14; /* Neon Green */
+    --accent-color: #2a2a2a;    /* Dark Gray for borders */
+    --background-color: #000000; /* Pure Black for the body */
+    --card-background: #111111; /* Very Dark Gray */
+    --text-color: #e0e0e0;       /* Light Gray Text */
+    --heading-color: #ffffff;   /* White for Headings */
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+    
+    /* Body is now a solid black, providing a base layer */
+    background-color: var(--background-color);
+}
+
+header {
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-color);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: 700;
+    color: var(--heading-color);
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: var(--text-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    /* NEW: The texture is now applied only to the main content area */
+    background-color: #0a0a0a;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="28" height="49" viewBox="0 0 28 49"%3E%3Cg fill-rule="evenodd"%3E%3Cg id="hexagons" fill="%232a2a2a" fill-opacity="0.2" fill-rule="nonzero"%3E%3Cpath d="M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.99-7.5L28 15v19L13.99 41.5 0 34V15z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+#search-section {
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+#search-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: var(--heading-color);
+}
+
+.search-container input[type="text"] {
+    width: 80%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 50px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--card-background);
+    color: var(--text-color);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #888;
+}
+
+.search-container input[type="text"]:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+#plants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.plant-card {
+    background-color: rgba(17, 17, 17, 0.8); /* Semi-transparent to show main texture */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--accent-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.plant-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.25);
+}
+
+.plant-card model-viewer {
+    width: 100%;
+    height: 300px;
+    background-color: transparent;
+    --poster-color: transparent;
+}
+
+.plant-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.plant-info h3 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    color: var(--heading-color);
+    line-height: 1.2;
+}
+
+.plant-info h3 span {
+    font-size: 0.6em;
+    font-weight: 400;
+    color: #ccc;
+    font-style: italic;
+}
+
+.plant-info p {
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+
+.plant-info strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.plant-info img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid var(--accent-color);
+    filter: brightness(0.8);
+}
+
+footer {
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--accent-color);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.8em;
+    }
+    
+    #plants-grid {
+        grid-template-columns: 1fr;
+    }
+}

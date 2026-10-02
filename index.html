@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Virtual Herbal Garden</h1>
+            <p class="subtitle">Explore the world of medicinal plants from AYUSH traditions.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <h2>Find a Plant</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search by name (e.g., Tulsi)" onkeyup="filterPlants()">
+            </div>
+        </section>
+
+        <section id="plants-grid">
+            <div class="plant-card" data-name="Tulsi Ocimum sanctum Holy Basil Sacred Basil">
+                <model-viewer src="models/tulsi.glb" alt="A 3D model of a Tulsi plant" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Tulsi <span>(Ocimum sanctum)</span></h3>
+                    <p><strong>Common Names:</strong> Holy Basil, Sacred Basil</p>
+                    <p><strong>Medicinal Uses:</strong> Known for its anti-inflammatory, anti-viral, and antioxidant properties. Excellent for boosting immunity and reducing stress.</p>
+                    <img src="images/Tulsi.jpg" alt="Tulsi Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Ashwagandha Withania somnifera Indian Ginseng Winter Cherry">
+                <model-viewer src="models/Ahwagandha.glb" alt="A 3D model of an Ashwagandha plant" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Ashwagandha <span>(Withania somnifera)</span></h3>
+                    <p><strong>Common Names:</strong> Indian Ginseng, Winter Cherry</p>
+                    <p><strong>Medicinal Uses:</strong> A powerful adaptogen that helps the body manage stress. It also boosts brain function and fights symptoms of anxiety.</p>
+                    <img src="images/Ashwagandha.jpeg" alt="Ashwagandha Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Turmeric Curcuma longa Haldi Indian Saffron">
+                <model-viewer src="models/Turmeric.glb" alt="A 3D model of a Turmeric plant" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Turmeric <span>(Curcuma longa)</span></h3>
+                    <p><strong>Common Names:</strong> Haldi, Indian Saffron</p>
+                    <p><strong>Medicinal Uses:</strong> Contains curcumin, a substance with powerful anti-inflammatory and antioxidant properties. Widely used for joint health.</p>
+                    <img src="images/turmeric.jpg" alt="Turmeric Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Cinnamon Cinnamomum verum Ceylon Cinnamon True Cinnamon">
+                <model-viewer src="models/Cinnamon.glb" alt="A 3D model of Cinnamon sticks" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Cinnamon <span>(Cinnamomum verum)</span></h3>
+                    <p><strong>Common Names:</strong> Ceylon Cinnamon, True Cinnamon</p>
+                    <p><strong>Medicinal Uses:</strong> Loaded with antioxidants, it has anti-inflammatory effects and helps regulate blood sugar levels, making it beneficial for metabolic health.</p>
+                    <img src="images/cinnamon.jpeg" alt="Cinnamon Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Cardamom Elettaria cardamomum True Cardamom">
+                <model-viewer src="models/Cardamom.glb" alt="A 3D model of Cardamom pods" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Cardamom <span>(Elettaria cardamomum)</span></h3>
+                    <p><strong>Common Names:</strong> True Cardamom</p>
+                    <p><strong>Medicinal Uses:</strong> Known for its ability to soothe digestive issues. It also has diuretic properties and may help lower blood pressure.</p>
+                    <img src="images/Cardamom.jpg" alt="Cardamom Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Clove Syzygium aromaticum Clove Buds">
+                <model-viewer src="models/clove.glb" alt="A 3D model of Cloves" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Clove <span>(Syzygium aromaticum)</span></h3>
+                    <p><strong>Common Names:</strong> Clove Buds</p>
+                    <p><strong>Medicinal Uses:</strong> High in antioxidants and has antimicrobial properties. Often used in dental care for its pain-relieving effects.</p>
+                    <img src="images/clove.jpg" alt="Clove Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Brahmi Bacopa monnieri Water hyssop Herb of grace">
+                <model-viewer src="models/brahmi.glb" alt="A 3D model of a Brahmi plant" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Brahmi <span>(Bacopa monnieri)</span></h3>
+                    <p><strong>Common Names:</strong> Water hyssop, Herb of grace</p>
+                    <p><strong>Medicinal Uses:</strong> Renowned as a memory enhancer and cognitive booster. It helps reduce anxiety and stress by regulating cortisol levels.</p>
+                    <img src="images/brahmi.jpg" alt="Brahmi Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Giloy Tinospora cordifolia Guduchi Amrita Heart-leaved moonseed">
+                <model-viewer src="models/giloy.glb" alt="A 3D model of a Giloy plant" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Giloy <span>(Tinospora cordifolia)</span></h3>
+                    <p><strong>Common Names:</strong> Guduchi, Amrita, Heart-leaved moonseed</p>
+                    <p><strong>Medicinal Uses:</strong> A powerful immunity booster with anti-pyretic properties, making it effective in fighting fevers like dengue and swine flu.</p>
+                    <img src="images/giloy.jpg" alt="Giloy Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Hibiscus rosa-sinensis Shoeblackplant China rose">
+                <model-viewer src="models/hibiscus.glb" alt="A 3D model of a Hibiscus flower" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Hibiscus <span>(Hibiscus rosa-sinensis)</span></h3>
+                    <p><strong>Common Names:</strong> Shoeblackplant, China rose</p>
+                    <p><strong>Medicinal Uses:</strong> Rich in antioxidants and vitamin C. Often used in teas to lower blood pressure and promote hair growth and health.</p>
+                    <img src="images/hibiscus.jpg" alt="Hibiscus Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Methi Fenugreek Trigonella foenum-graecum">
+                <model-viewer src="models/methi.glb" alt="A 3D model of Methi (Fenugreek) seeds" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Methi <span>(Trigonella foenum-graecum)</span></h3>
+                    <p><strong>Common Names:</strong> Fenugreek</p>
+                    <p><strong>Medicinal Uses:</strong> Helps control blood sugar levels, aids in digestion and weight loss, and is known to boost milk production in nursing mothers.</p>
+                    <img src="images/methi.jpg" alt="Methi Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Mint Mentha Pudina Spearmint Peppermint">
+                <model-viewer src="models/mint.glb" alt="A 3D model of a Mint plant" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Mint <span>(Mentha spicata)</span></h3>
+                    <p><strong>Common Names:</strong> Pudina, Spearmint</p>
+                    <p><strong>Medicinal Uses:</strong> Widely used to soothe indigestion and upset stomachs. Its strong aroma helps relieve headaches and clears nasal congestion.</p>
+                    <img src="images/mint.jpg" alt="Mint Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Neem Azadirachta indica Indian lilac">
+                <model-viewer src="models/neem.glb" alt="A 3D model of a Neem plant" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Neem <span>(Azadirachta indica)</span></h3>
+                    <p><strong>Common Names:</strong> Indian lilac</p>
+                    <p><strong>Medicinal Uses:</strong> Possesses powerful antibacterial, antifungal, and antiviral properties. Widely used for skin conditions and dental care.</p>
+                    <img src="images/neem.jpg" alt="Neem Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div class="plant-card" data-name="Aloe Vera aloevera Ghritkumari">
+                <model-viewer src="models/aloevera.glb" alt="A 3D model of an Aloe Vera plant" auto-rotate camera-controls exposure="1.2"></model-viewer>
+                <div class="plant-info">
+                    <h3>Aloe Vera <span>(Aloe vera)</span></h3>
+                    <p><strong>Common Names:</strong> Ghritkumari</p>
+                    <p><strong>Medicinal Uses:</strong> The gel is famous for soothing sunburns and healing skin wounds. Its juice can aid digestion and relieve constipation.</p>
+                    <img src="images/aloevera.jpg" alt="Aloe Vera Plant" loading="lazy">
+                </div>
+            </div>
+
+            <div id="no-results-message" style="display: none; text-align: center; width: 100%; padding: 40px 0;">
+                <h3>No plants found.</h3>
+                <p>Please try a different search term.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Virtual Herbal Garden by Kartikey Sharma</p>
+        <p>Contact: <a>9413120504</a></p>
+    </footer>
+
+    <script>
+        function filterPlants() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const plantCards = document.querySelectorAll('.plant-card');
+            const noResultsMessage = document.getElementById('no-results-message');
+            let visibleCount = 0;
+
+            plantCards.forEach(card => {
+                const plantNameData = card.getAttribute('data-name').toLowerCase();
+                if (plantNameData.includes(input)) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResultsMessage.style.display = 'block';
+            } else {
+                noResultsMessage.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
